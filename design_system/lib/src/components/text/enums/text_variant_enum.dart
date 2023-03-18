@@ -1,0 +1,1 @@
+enum TextVariant { red, blue }
