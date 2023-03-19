@@ -31,14 +31,18 @@ jobs:
         with:
           flutter-version: "3.7.7"
           channel: "stable"
-      - name: Build Flutter Web
+      - name: Flutter Pub Get
+        run: |
+          cd design_system && flutter pub get
+          cd ../widgetbooks/design_system_widgetbook && flutter pub get
+      - name: Flutter Build Web
         run: |
           cd ./widgetbooks/design_system_widgetbook
           flutter build web --release --base-href /
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: './build/web'
+          path: './widgetbooks/design_system_widgetbook/build/web'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
