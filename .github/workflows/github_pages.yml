@@ -38,7 +38,7 @@ jobs:
       - name: Flutter Build Web
         run: |
           cd ./widgetbooks/design_system_widgetbook
-          flutter build web --release --base-href /
+          flutter build web --release --base-href="/widgetbook-test/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
