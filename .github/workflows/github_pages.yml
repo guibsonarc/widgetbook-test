@@ -39,6 +39,8 @@ jobs:
         run: |
           cd ./widgetbooks/design_system_widgetbook
           flutter build web --release --base-href="/widgetbook-test/"
+      - name: Dart Doc
+        run: dart doc ./design_system --output="./widgetbooks/design_system_widgetbook/build/web/doc"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
