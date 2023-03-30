@@ -66,7 +66,7 @@ class HotReload extends StatelessWidget {
                 WidgetbookUseCase(
                   name: 'Default',
                   builder: (context) => UseCaseContainerWidget(
-                    documentationClass: 'SwitchComponent',
+                    documentationClass: 'AppBarComponent',
                     child: Scaffold(
                       appBar: AppBarComponent(
                         title: context.knobs.text(

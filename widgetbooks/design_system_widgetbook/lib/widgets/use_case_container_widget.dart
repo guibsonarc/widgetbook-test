@@ -26,7 +26,7 @@ class _UseCaseContainerWidgetState extends State<UseCaseContainerWidget> {
   void goToDocumentation() async {
     const String baseUrl = 'https://guibsonarc.github.io/widgetbook-test';
     Uri uri = Uri.parse(
-      '$baseUrl/doc/api/design_system/${widget.documentationClass}-class.html',
+      '$baseUrl/doc/design_system/${widget.documentationClass}-class.html',
     );
     if (await canLaunchUrl(uri)) {
       launchUrl(uri);
